@@ -1,0 +1,10 @@
+Customer Support FAQ
+
+Q: How do I reset my password?
+A: Click "Forgot Password" on the login page.
+
+Q: How can I contact support?
+A: Email support@example.com.
+
+Q: What are your working hours?
+A: Monday–Friday, 09:00–17:00.
