@@ -1,8 +1,9 @@
 from fastapi import FastAPI, HTTPException
 
+from agents.email_triage_agent import email_triage_agent
 from agents.support_agent import support_agent
 from agents.web_summary_agent import web_summary_agent
-from schemas.request import SupportChatRequest, WebSummaryRequest
+from schemas.request import EmailTriageRequest, SupportChatRequest, WebSummaryRequest
 from utils.logger import get_logger
 
 
@@ -55,3 +56,11 @@ def support_chat(request: SupportChatRequest):
 
 	logger.info("Support chat request completed session_id=%s", request.session_id)
 	return result
+
+@app.post("/email")
+def email_triage(request: EmailTriageRequest):
+	return email_triage_agent.process(
+		subject=request.subject,
+		body=request.body,
+		contacts_last_7_days=request.contacts_last_7_days,
+	)

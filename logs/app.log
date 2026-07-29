@@ -2651,3 +2651,14 @@ google.genai.errors.ClientError: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429,
 2026-07-29 20:51:23,209 | INFO | services.gemini | Gemini response generated successfully
 2026-07-29 20:51:23,210 | INFO | agents.web_summary_agent | Completed web summary flow for url=https://id.wikipedia.org/wiki/Mariano_Peralta
 2026-07-29 20:51:23,210 | INFO | app | Web summary request completed for url=https://id.wikipedia.org/wiki/Mariano_Peralta
+2026-07-29 22:32:00,426 | INFO | app | Received web summary request for url=https://id.wikipedia.org/wiki/Mariano_Peralta
+2026-07-29 22:32:00,427 | INFO | agents.web_summary_agent | Starting web summary flow for url=https://id.wikipedia.org/wiki/Mariano_Peralta
+2026-07-29 22:32:00,427 | INFO | services.scraper | Scraping url=https://id.wikipedia.org/wiki/Mariano_Peralta
+2026-07-29 22:32:01,016 | INFO | services.scraper | Scrape completed url=https://id.wikipedia.org/wiki/Mariano_Peralta title=Mariano Peralta - Wikipedia bahasa Indonesia, ensiklopedia bebas length=1976
+2026-07-29 22:32:01,021 | INFO | services.gemini | Generating Gemini response with model=gemini-3.6-flash
+2026-07-29 22:32:50,485 | INFO | services.gemini | Gemini response generated successfully
+2026-07-29 22:32:50,486 | INFO | agents.web_summary_agent | Completed web summary flow for url=https://id.wikipedia.org/wiki/Mariano_Peralta
+2026-07-29 22:32:50,486 | INFO | app | Web summary request completed for url=https://id.wikipedia.org/wiki/Mariano_Peralta
+2026-07-29 22:33:05,593 | INFO | services.gemini | Generating Gemini response with model=gemini-3.6-flash
+2026-07-29 22:33:08,230 | INFO | services.gemini | Gemini response generated successfully
+2026-07-29 22:36:11,116 | INFO | app | Root endpoint accessed
