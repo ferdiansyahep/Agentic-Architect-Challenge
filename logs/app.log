@@ -107,3 +107,84 @@
 2026-07-29 17:19:55,111 | INFO | app | Support chat request completed session_id=user-1
 2026-07-29 17:19:55,117 | INFO | app | Received support chat request session_id=user-1
 2026-07-29 17:19:55,117 | ERROR | app | Support chat request failed: unable to answer
+2026-07-29 17:22:05,009 | INFO | app | Received support chat request session_id=user-1
+2026-07-29 17:22:05,010 | INFO | agents.support_agent | Support agent request session_id=user-1 question=my name is Budi
+2026-07-29 17:22:05,013 | INFO | app | Support chat request completed session_id=user-1
+2026-07-29 17:22:51,195 | INFO | app | Received support chat request session_id=user-1
+2026-07-29 17:22:51,196 | INFO | agents.support_agent | Support agent request session_id=user-1 question=what is my name?
+2026-07-29 17:22:51,196 | INFO | app | Support chat request completed session_id=user-1
+2026-07-29 17:23:20,279 | INFO | app | Received support chat request session_id=user-1
+2026-07-29 17:23:20,280 | INFO | agents.support_agent | Support agent request session_id=user-1 question=Please calculate 2 + 3 * 4
+2026-07-29 17:23:20,281 | INFO | app | Support chat request completed session_id=user-1
+2026-07-29 17:23:59,430 | INFO | app | Received support chat request session_id=user-1
+2026-07-29 17:23:59,430 | INFO | agents.support_agent | Support agent request session_id=user-1 question=How do I reset my password?
+2026-07-29 17:23:59,432 | INFO | app | Support chat request completed session_id=user-1
+2026-07-29 18:29:40,024 | INFO | app | Received support chat request session_id=user-1
+2026-07-29 18:29:40,024 | INFO | agents.support_agent | Support agent request session_id=user-1
+2026-07-29 18:29:40,025 | INFO | app | Support chat request completed session_id=user-1
+2026-07-29 18:30:01,562 | INFO | app | Received support chat request session_id=user-1
+2026-07-29 18:30:01,563 | INFO | agents.support_agent | Support agent request session_id=user-1
+2026-07-29 18:30:01,565 | INFO | app | Support chat request completed session_id=user-1
+2026-07-29 18:31:11,344 | INFO | app | Received support chat request session_id=user-1
+2026-07-29 18:31:11,344 | INFO | agents.support_agent | Support agent request session_id=user-1
+2026-07-29 18:31:23,482 | INFO | app | Received support chat request session_id=user-1
+2026-07-29 18:31:23,482 | INFO | agents.support_agent | Support agent request session_id=user-1
+2026-07-29 18:31:23,483 | INFO | app | Support chat request completed session_id=user-1
+2026-07-29 18:31:45,696 | INFO | app | Received support chat request session_id=user-1
+2026-07-29 18:31:45,696 | INFO | agents.support_agent | Support agent request session_id=user-1
+2026-07-29 18:31:45,697 | INFO | app | Support chat request completed session_id=user-1
+2026-07-29 18:32:45,708 | INFO | app | Received support chat request session_id=user-1
+2026-07-29 18:32:45,708 | INFO | agents.support_agent | Support agent request session_id=user-1
+2026-07-29 18:32:45,709 | INFO | app | Support chat request completed session_id=user-1
+2026-07-29 18:34:05,400 | INFO | app | Received support chat request session_id=user-2
+2026-07-29 18:34:05,400 | INFO | agents.support_agent | Support agent request session_id=user-2
+2026-07-29 18:34:05,401 | INFO | app | Support chat request completed session_id=user-2
+2026-07-29 18:34:22,671 | INFO | app | Received support chat request session_id=user-2
+2026-07-29 18:34:22,671 | INFO | agents.support_agent | Support agent request session_id=user-2
+2026-07-29 18:34:22,672 | INFO | app | Support chat request completed session_id=user-2
+2026-07-29 18:34:38,786 | INFO | app | Received support chat request session_id=user-2
+2026-07-29 18:34:38,786 | INFO | agents.support_agent | Support agent request session_id=user-2
+2026-07-29 18:34:38,786 | INFO | app | Support chat request completed session_id=user-2
+2026-07-29 18:34:46,662 | INFO | app | Received support chat request session_id=user-1
+2026-07-29 18:34:46,662 | INFO | agents.support_agent | Support agent request session_id=user-1
+2026-07-29 18:34:46,663 | INFO | app | Support chat request completed session_id=user-1
+2026-07-29 18:40:21,359 | INFO | app | Received support chat request session_id=user-1
+2026-07-29 18:40:21,359 | INFO | agents.support_agent | Support agent request session_id=user-1
+2026-07-29 18:40:21,360 | INFO | app | Support chat request completed session_id=user-1
+2026-07-29 18:41:03,724 | INFO | app | Received support chat request session_id=user-1
+2026-07-29 18:41:03,725 | INFO | agents.support_agent | Support agent request session_id=user-1
+2026-07-29 18:41:03,726 | INFO | app | Support chat request completed session_id=user-1
+2026-07-29 19:03:11,418 | INFO | app | Received support chat request session_id=user-1
+2026-07-29 19:03:11,419 | INFO | agents.support_agent | Support agent request session_id=user-1
+2026-07-29 19:03:11,421 | INFO | services.gemini | Generating Gemini response with model=gemini-2.5-flash
+2026-07-29 19:03:12,928 | INFO | services.gemini | Gemini response generated successfully
+2026-07-29 19:03:12,929 | INFO | app | Support chat request completed session_id=user-1
+2026-07-29 19:03:51,867 | INFO | app | Received support chat request session_id=user-1
+2026-07-29 19:03:51,867 | INFO | agents.support_agent | Support agent request session_id=user-1
+2026-07-29 19:03:51,868 | INFO | services.gemini | Generating Gemini response with model=gemini-2.5-flash
+2026-07-29 19:03:54,724 | INFO | services.gemini | Gemini response generated successfully
+2026-07-29 19:03:54,725 | INFO | app | Support chat request completed session_id=user-1
+2026-07-29 19:04:33,039 | INFO | app | Received support chat request session_id=user-1
+2026-07-29 19:04:33,040 | INFO | agents.support_agent | Support agent request session_id=user-1
+2026-07-29 19:04:33,040 | INFO | app | Support chat request completed session_id=user-1
+2026-07-29 19:04:57,282 | INFO | app | Received support chat request session_id=user-1
+2026-07-29 19:04:57,282 | INFO | agents.support_agent | Support agent request session_id=user-1
+2026-07-29 19:04:57,283 | INFO | services.gemini | Generating Gemini response with model=gemini-2.5-flash
+2026-07-29 19:04:59,336 | INFO | services.gemini | Gemini response generated successfully
+2026-07-29 19:04:59,338 | INFO | app | Support chat request completed session_id=user-1
+2026-07-29 19:05:18,269 | INFO | app | Received support chat request session_id=user-1
+2026-07-29 19:05:18,270 | INFO | agents.support_agent | Support agent request session_id=user-1
+2026-07-29 19:05:18,271 | INFO | app | Support chat request completed session_id=user-1
+2026-07-29 19:05:58,806 | INFO | app | Received support chat request session_id=user-1
+2026-07-29 19:05:58,807 | INFO | agents.support_agent | Support agent request session_id=user-1
+2026-07-29 19:05:58,808 | INFO | services.gemini | Generating Gemini response with model=gemini-2.5-flash
+2026-07-29 19:06:00,738 | INFO | services.gemini | Gemini response generated successfully
+2026-07-29 19:06:00,739 | INFO | app | Support chat request completed session_id=user-1
+2026-07-29 19:06:36,675 | INFO | app | Received support chat request session_id=user-1
+2026-07-29 19:06:36,676 | INFO | agents.support_agent | Support agent request session_id=user-1
+2026-07-29 19:06:36,677 | INFO | services.gemini | Generating Gemini response with model=gemini-2.5-flash
+2026-07-29 19:06:37,979 | INFO | services.gemini | Gemini response generated successfully
+2026-07-29 19:06:37,980 | INFO | app | Support chat request completed session_id=user-1
+2026-07-29 19:06:59,349 | INFO | app | Received support chat request session_id=user-1
+2026-07-29 19:06:59,350 | INFO | agents.support_agent | Support agent request session_id=user-1
+2026-07-29 19:06:59,350 | INFO | app | Support chat request completed session_id=user-1

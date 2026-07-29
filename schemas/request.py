@@ -1,6 +1,6 @@
 from typing import Optional
 
-from pydantic import BaseModel, Field, HttpUrl
+from pydantic import BaseModel, Field, HttpUrl, field_validator
 
 
 class WebSummaryRequest(BaseModel):
@@ -19,6 +19,14 @@ class DocumentQuestionRequest(BaseModel):
 
 
 class SupportChatRequest(BaseModel):
-	session_id: str = Field(..., min_length=1, description="Conversation session identifier")
-	question: str = Field(..., min_length=1, description="User question")
-	context: Optional[str] = Field(default=None, description="Optional explicit context override")
+	session_id: str = Field(..., min_length=1, max_length=100, description="Conversation session identifier")
+	question: str = Field(..., min_length=1, max_length=2000, description="User question")
+	context: Optional[str] = Field(default=None, max_length=12000, description="Optional explicit context override")
+
+	@field_validator("session_id", "question")
+	@classmethod
+	def reject_blank_values(cls, value: str) -> str:
+		value = value.strip()
+		if not value:
+			raise ValueError("must not be blank")
+		return value
