@@ -16,3 +16,9 @@ class WebSummaryRequest(BaseModel):
 class DocumentQuestionRequest(BaseModel):
 	question: str = Field(..., min_length=1)
 	context: Optional[str] = None
+
+
+class SupportChatRequest(BaseModel):
+	session_id: str = Field(..., min_length=1, description="Conversation session identifier")
+	question: str = Field(..., min_length=1, description="User question")
+	context: Optional[str] = Field(default=None, description="Optional explicit context override")

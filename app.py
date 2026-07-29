@@ -1,7 +1,8 @@
 from fastapi import FastAPI, HTTPException
 
+from agents.support_agent import support_agent
 from agents.web_summary_agent import web_summary_agent
-from schemas.request import WebSummaryRequest
+from schemas.request import SupportChatRequest, WebSummaryRequest
 from utils.logger import get_logger
 
 
@@ -10,7 +11,7 @@ logger = get_logger(__name__)
 
 app = FastAPI(
 	title="Agentic Architect Challenge",
-	description="Part 2: scrape a website, summarize it, and apply a concise guardrail.",
+	description="Part 2 & 3: web summary plus FAQ-based support agent with memory and tools.",
 	version="1.0.0",
 )
 
@@ -36,4 +37,21 @@ def summarize_web(request: WebSummaryRequest):
 		raise HTTPException(status_code=400, detail=result)
 
 	logger.info("Web summary request completed for url=%s", request.url)
+	return result
+
+
+@app.post("/support-chat")
+def support_chat(request: SupportChatRequest):
+	logger.info("Received support chat request session_id=%s", request.session_id)
+	result = support_agent.chat(
+		session_id=request.session_id,
+		question=request.question,
+		context=request.context,
+	)
+
+	if not result.get("success"):
+		logger.error("Support chat request failed: %s", result.get("error", result))
+		raise HTTPException(status_code=400, detail=result)
+
+	logger.info("Support chat request completed session_id=%s", request.session_id)
 	return result

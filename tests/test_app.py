@@ -49,3 +49,43 @@ def test_web_summary_endpoint_rejects_failure(monkeypatch):
 
     assert response.status_code == 400
     assert response.json()["detail"]["error"] == "bad url"
+
+
+def test_support_chat_endpoint(monkeypatch):
+    monkeypatch.setattr(
+        app_module.support_agent,
+        "chat",
+        lambda session_id, question, context=None: {
+            "success": True,
+            "session_id": session_id,
+            "answer": "Use the forgot password link.",
+            "used_tool": "retriever",
+        },
+    )
+
+    response = client.post(
+        "/support-chat",
+        json={"session_id": "user-1", "question": "How do I reset password?"},
+    )
+
+    assert response.status_code == 200
+    assert response.json()["answer"] == "Use the forgot password link."
+
+
+def test_support_chat_endpoint_rejects_failure(monkeypatch):
+    monkeypatch.setattr(
+        app_module.support_agent,
+        "chat",
+        lambda session_id, question, context=None: {
+            "success": False,
+            "error": "unable to answer",
+        },
+    )
+
+    response = client.post(
+        "/support-chat",
+        json={"session_id": "user-1", "question": "How do I reset password?"},
+    )
+
+    assert response.status_code == 400
+    assert response.json()["detail"]["error"] == "unable to answer"

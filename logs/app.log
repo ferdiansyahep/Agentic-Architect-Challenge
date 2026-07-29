@@ -73,3 +73,37 @@
 2026-07-29 15:21:10,819 | INFO | agents.web_summary_agent | Completed web summary flow for url=https://id.wikipedia.org/wiki/John_F._Kennedy
 2026-07-29 15:21:10,821 | INFO | agents.web_summary_agent | Starting web summary flow for url=https://id.wikipedia.org/wiki/John_F._Kennedym
 2026-07-29 15:21:10,821 | ERROR | agents.web_summary_agent | Scrape step failed for url=https://id.wikipedia.org/wiki/John_F._Kennedym: boom
+2026-07-29 16:43:12,746 | INFO | app | Received web summary request for url=https://id.wikipedia.org/wiki/Mariano_Peralta
+2026-07-29 16:43:12,749 | INFO | agents.web_summary_agent | Starting web summary flow for url=https://id.wikipedia.org/wiki/Mariano_Peralta
+2026-07-29 16:43:12,749 | INFO | services.scraper | Scraping url=https://id.wikipedia.org/wiki/Mariano_Peralta
+2026-07-29 16:43:13,162 | INFO | services.scraper | Scrape completed url=https://id.wikipedia.org/wiki/Mariano_Peralta title=Mariano Peralta - Wikipedia bahasa Indonesia, ensiklopedia bebas length=1976
+2026-07-29 16:43:13,166 | INFO | services.gemini | Generating Gemini response with model=gemini-2.5-flash
+2026-07-29 16:43:16,530 | INFO | services.gemini | Gemini response generated successfully
+2026-07-29 16:43:16,531 | INFO | agents.web_summary_agent | Completed web summary flow for url=https://id.wikipedia.org/wiki/Mariano_Peralta
+2026-07-29 16:43:16,532 | INFO | app | Web summary request completed for url=https://id.wikipedia.org/wiki/Mariano_Peralta
+2026-07-29 17:11:49,162 | INFO | agents.support_agent | Support agent request session_id=s-1 question=How do I reset my password?
+2026-07-29 17:11:49,165 | INFO | agents.support_agent | Support agent request session_id=s-2 question=nama saya Budi
+2026-07-29 17:11:49,165 | INFO | agents.support_agent | Support agent request session_id=s-2 question=siapa nama saya?
+2026-07-29 17:11:49,167 | INFO | agents.support_agent | Support agent request session_id=s-3 question=Tolong hitung 2 + 3 * 4
+2026-07-29 17:11:49,175 | INFO | app | Root endpoint accessed
+2026-07-29 17:11:49,183 | INFO | app | Received web summary request for url=https://example.com/
+2026-07-29 17:11:49,183 | INFO | app | Web summary request completed for url=https://example.com/
+2026-07-29 17:11:49,191 | INFO | app | Received web summary request for url=https://example.com/
+2026-07-29 17:11:49,192 | ERROR | app | Web summary request failed: bad url
+2026-07-29 17:11:49,199 | INFO | app | Received support chat request session_id=user-1
+2026-07-29 17:11:49,199 | INFO | app | Support chat request completed session_id=user-1
+2026-07-29 17:11:49,206 | INFO | app | Received support chat request session_id=user-1
+2026-07-29 17:11:49,206 | ERROR | app | Support chat request failed: unable to answer
+2026-07-29 17:19:55,077 | INFO | agents.support_agent | Support agent request session_id=s-1 question=How do I reset my password?
+2026-07-29 17:19:55,079 | INFO | agents.support_agent | Support agent request session_id=s-2 question=my name is Budi
+2026-07-29 17:19:55,080 | INFO | agents.support_agent | Support agent request session_id=s-2 question=what is my name?
+2026-07-29 17:19:55,081 | INFO | agents.support_agent | Support agent request session_id=s-3 question=Please calculate 2 + 3 * 4
+2026-07-29 17:19:55,088 | INFO | app | Root endpoint accessed
+2026-07-29 17:19:55,097 | INFO | app | Received web summary request for url=https://example.com/
+2026-07-29 17:19:55,097 | INFO | app | Web summary request completed for url=https://example.com/
+2026-07-29 17:19:55,103 | INFO | app | Received web summary request for url=https://example.com/
+2026-07-29 17:19:55,103 | ERROR | app | Web summary request failed: bad url
+2026-07-29 17:19:55,111 | INFO | app | Received support chat request session_id=user-1
+2026-07-29 17:19:55,111 | INFO | app | Support chat request completed session_id=user-1
+2026-07-29 17:19:55,117 | INFO | app | Received support chat request session_id=user-1
+2026-07-29 17:19:55,117 | ERROR | app | Support chat request failed: unable to answer
