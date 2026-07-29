@@ -6,6 +6,7 @@ from services.retriever import retriever
 
 
 class EmailTriageAgent:
+	"""Safety-first email triage with Gemini classification and drafting."""
 
 	_CRITICAL_PATTERNS = {
 		"data_loss": ("data loss", "lost data", "data hilang", "kehilangan data"),

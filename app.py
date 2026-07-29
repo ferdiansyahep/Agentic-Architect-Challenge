@@ -4,6 +4,7 @@ from agents.email_triage_agent import email_triage_agent
 from agents.support_agent import support_agent
 from agents.web_summary_agent import web_summary_agent
 from schemas.request import EmailTriageRequest, SupportChatRequest, WebSummaryRequest
+from services.contact_tracker import contact_tracker
 from utils.logger import get_logger
 
 
@@ -59,8 +60,11 @@ def support_chat(request: SupportChatRequest):
 
 @app.post("/email")
 def email_triage(request: EmailTriageRequest):
-	return email_triage_agent.process(
+	contacts_last_7_days = contact_tracker.record_contact(request.customer_id)
+	result = email_triage_agent.process(
 		subject=request.subject,
 		body=request.body,
-		contacts_last_7_days=request.contacts_last_7_days,
+		contacts_last_7_days=contacts_last_7_days,
 	)
+	result["contacts_last_7_days"] = contacts_last_7_days
+	return result
