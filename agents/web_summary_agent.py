@@ -1,15 +1,21 @@
 from services.gemini import gemini
 from services.scraper import scraper
 from tools.guardrails import guardrails
+from utils.logger import get_logger
+
+
+logger = get_logger(__name__)
 
 
 class WebSummaryAgent:
 
 	def summarize(self, url, max_output_words=160):
+		logger.info("Starting web summary flow for url=%s", url)
 
 		scrape_result = scraper.scrape(url)
 
 		if not scrape_result.get("success"):
+			logger.error("Scrape step failed for url=%s: %s", url, scrape_result.get("error"))
 			return scrape_result
 
 		original_max_words = guardrails.max_output_words
@@ -25,9 +31,12 @@ class WebSummaryAgent:
 			summary_result = gemini.generate(prompt_pack["prompt"])
 
 			if not summary_result.get("success"):
+				logger.error("Gemini step failed for url=%s: %s", url, summary_result.get("error"))
 				return summary_result
 
 			summary = guardrails.validate_summary(summary_result.get("response", ""))
+
+			logger.info("Completed web summary flow for url=%s", url)
 
 			return {
 				"success": True,

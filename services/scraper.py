@@ -3,6 +3,11 @@ from urllib.parse import urlparse
 import requests
 from bs4 import BeautifulSoup
 
+from utils.logger import get_logger
+
+
+logger = get_logger(__name__)
+
 
 class ScraperService:
 
@@ -12,10 +17,12 @@ class ScraperService:
     def scrape(self, url):
 
         try:
+            logger.info("Scraping url=%s", url)
 
             parsed_url = urlparse(url)
 
             if parsed_url.scheme not in {"http", "https"} or not parsed_url.netloc:
+                logger.warning("Rejected invalid url=%s", url)
                 return {
                     "success": False,
                     "error": "Invalid URL. Use http or https."
@@ -53,8 +60,11 @@ class ScraperService:
 
             if len(article) > 12000:
                 article = article[:12000].rsplit(" ", 1)[0]
+                logger.warning("Trimmed scraped content for url=%s to 12000 characters", url)
 
             title = self._clean_text(soup.title.get_text()) if soup.title and soup.title.get_text() else ""
+
+            logger.info("Scrape completed url=%s title=%s length=%d", url, title, len(article))
 
             return {
                 "success": True,
@@ -64,6 +74,7 @@ class ScraperService:
             }
 
         except Exception as e:
+            logger.exception("Scrape failed for url=%s", url)
 
             return {
                 "success": False,

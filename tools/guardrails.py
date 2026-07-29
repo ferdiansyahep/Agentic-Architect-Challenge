@@ -1,5 +1,10 @@
 from dataclasses import dataclass
 
+from utils.logger import get_logger
+
+
+logger = get_logger(__name__)
+
 
 @dataclass
 class SummaryGuardrail:
@@ -12,6 +17,7 @@ class SummaryGuardrail:
 			return normalized, False
 
 		trimmed = normalized[: self.max_input_chars].rsplit(" ", 1)[0]
+		logger.warning("Source content trimmed from %d to %d characters", len(normalized), len(trimmed))
 		return trimmed, True
 
 	def build_prompt(self, *, title, url, content):
@@ -36,6 +42,7 @@ class SummaryGuardrail:
 		if len(words) <= self.max_output_words:
 			return summary
 
+		logger.warning("Summary truncated from %d to %d words", len(words), self.max_output_words)
 		return " ".join(words[: self.max_output_words]).rstrip() + "..."
 
 

@@ -1,0 +1,30 @@
+2026-07-29 15:04:23,208 | INFO | app | Root endpoint accessed
+2026-07-29 15:04:23,214 | INFO | app | Received web summary request for url=https://example.com/
+2026-07-29 15:04:23,214 | INFO | app | Web summary request completed for url=https://example.com/
+2026-07-29 15:04:23,221 | INFO | app | Received web summary request for url=https://example.com/
+2026-07-29 15:04:23,221 | ERROR | app | Web summary request failed: bad url
+2026-07-29 15:04:23,225 | WARNING | tools.guardrails | Source content trimmed from 22 to 16 characters
+2026-07-29 15:04:23,227 | WARNING | tools.guardrails | Summary truncated from 7 to 5 words
+2026-07-29 15:04:23,229 | INFO | services.scraper | Scraping url=not-a-url
+2026-07-29 15:04:23,229 | WARNING | services.scraper | Rejected invalid url=not-a-url
+2026-07-29 15:04:23,231 | INFO | services.scraper | Scraping url=https://example.com
+2026-07-29 15:04:23,232 | INFO | services.scraper | Scrape completed url=https://example.com title=Sample Page length=33
+2026-07-29 15:04:23,235 | INFO | agents.web_summary_agent | Starting web summary flow for url=https://example.com
+2026-07-29 15:04:23,235 | INFO | agents.web_summary_agent | Completed web summary flow for url=https://example.com
+2026-07-29 15:04:23,237 | INFO | agents.web_summary_agent | Starting web summary flow for url=https://example.com
+2026-07-29 15:04:23,237 | ERROR | agents.web_summary_agent | Scrape step failed for url=https://example.com: boom
+2026-07-29 15:06:29,146 | INFO | app | Root endpoint accessed
+2026-07-29 15:06:29,153 | INFO | app | Received web summary request for url=https://example.com/
+2026-07-29 15:06:29,153 | INFO | app | Web summary request completed for url=https://example.com/
+2026-07-29 15:06:29,158 | INFO | app | Received web summary request for url=https://example.com/
+2026-07-29 15:06:29,158 | ERROR | app | Web summary request failed: bad url
+2026-07-29 15:06:29,162 | WARNING | tools.guardrails | Source content trimmed from 22 to 16 characters
+2026-07-29 15:06:29,164 | WARNING | tools.guardrails | Summary truncated from 7 to 5 words
+2026-07-29 15:06:29,167 | INFO | services.scraper | Scraping url=not-a-url
+2026-07-29 15:06:29,167 | WARNING | services.scraper | Rejected invalid url=not-a-url
+2026-07-29 15:06:29,168 | INFO | services.scraper | Scraping url=https://example.com
+2026-07-29 15:06:29,169 | INFO | services.scraper | Scrape completed url=https://example.com title=Sample Page length=33
+2026-07-29 15:06:29,171 | INFO | agents.web_summary_agent | Starting web summary flow for url=https://example.com
+2026-07-29 15:06:29,171 | INFO | agents.web_summary_agent | Completed web summary flow for url=https://example.com
+2026-07-29 15:06:29,173 | INFO | agents.web_summary_agent | Starting web summary flow for url=https://example.com
+2026-07-29 15:06:29,173 | ERROR | agents.web_summary_agent | Scrape step failed for url=https://example.com: boom
