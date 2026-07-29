@@ -18,7 +18,7 @@ def test_web_summary_agent_success(monkeypatch):
         lambda prompt: {"success": True, "response": "concise summary"},
     )
 
-    result = agent_module.web_summary_agent.summarize("https://example.com", max_output_words=50)
+    result = agent_module.web_summary_agent.summarize("https://id.wikipedia.org/wiki/John_F._Kennedy", max_output_words=50)
 
     assert result["success"] is True
     assert result["title"] == "My Page"
@@ -32,7 +32,7 @@ def test_web_summary_agent_propagates_scrape_failure(monkeypatch):
         lambda url: {"success": False, "error": "boom"},
     )
 
-    result = agent_module.web_summary_agent.summarize("https://example.com")
+    result = agent_module.web_summary_agent.summarize("https://id.wikipedia.org/wiki/John_F._Kennedym")
 
     assert result["success"] is False
     assert result["error"] == "boom"

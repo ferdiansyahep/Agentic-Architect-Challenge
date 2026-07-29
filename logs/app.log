@@ -28,3 +28,48 @@
 2026-07-29 15:06:29,171 | INFO | agents.web_summary_agent | Completed web summary flow for url=https://example.com
 2026-07-29 15:06:29,173 | INFO | agents.web_summary_agent | Starting web summary flow for url=https://example.com
 2026-07-29 15:06:29,173 | ERROR | agents.web_summary_agent | Scrape step failed for url=https://example.com: boom
+2026-07-29 15:18:10,852 | INFO | app | Root endpoint accessed
+2026-07-29 15:18:10,860 | INFO | app | Received web summary request for url=https://example.com/
+2026-07-29 15:18:10,861 | INFO | app | Web summary request completed for url=https://example.com/
+2026-07-29 15:18:10,868 | INFO | app | Received web summary request for url=https://example.com/
+2026-07-29 15:18:10,868 | ERROR | app | Web summary request failed: bad url
+2026-07-29 15:18:10,872 | WARNING | tools.guardrails | Source content trimmed from 22 to 16 characters
+2026-07-29 15:18:10,876 | WARNING | tools.guardrails | Summary truncated from 7 to 5 words
+2026-07-29 15:18:10,879 | INFO | services.scraper | Scraping url=not-a-url
+2026-07-29 15:18:10,879 | WARNING | services.scraper | Rejected invalid url=not-a-url
+2026-07-29 15:18:10,880 | INFO | services.scraper | Scraping url=https://example.com
+2026-07-29 15:18:10,881 | INFO | services.scraper | Scrape completed url=https://example.com title=Sample Page length=33
+2026-07-29 15:18:10,883 | INFO | agents.web_summary_agent | Starting web summary flow for url=https://id.wikipedia.org/wiki/John_F._Kennedy
+2026-07-29 15:18:10,883 | INFO | agents.web_summary_agent | Completed web summary flow for url=https://id.wikipedia.org/wiki/John_F._Kennedy
+2026-07-29 15:18:10,885 | INFO | agents.web_summary_agent | Starting web summary flow for url=https://id.wikipedia.org/wiki/John_F._Kennedym
+2026-07-29 15:18:10,885 | ERROR | agents.web_summary_agent | Scrape step failed for url=https://id.wikipedia.org/wiki/John_F._Kennedym: boom
+2026-07-29 15:19:41,845 | INFO | app | Root endpoint accessed
+2026-07-29 15:19:41,852 | INFO | app | Received web summary request for url=https://example.com/
+2026-07-29 15:19:41,852 | INFO | app | Web summary request completed for url=https://example.com/
+2026-07-29 15:19:41,858 | INFO | app | Received web summary request for url=https://example.com/
+2026-07-29 15:19:41,858 | ERROR | app | Web summary request failed: bad url
+2026-07-29 15:19:41,862 | WARNING | tools.guardrails | Source content trimmed from 22 to 16 characters
+2026-07-29 15:19:41,866 | WARNING | tools.guardrails | Summary truncated from 7 to 5 words
+2026-07-29 15:19:41,868 | INFO | services.scraper | Scraping url=not-a-url
+2026-07-29 15:19:41,869 | WARNING | services.scraper | Rejected invalid url=not-a-url
+2026-07-29 15:19:41,871 | INFO | services.scraper | Scraping url=https://example.com
+2026-07-29 15:19:41,872 | INFO | services.scraper | Scrape completed url=https://example.com title=Sample Page length=33
+2026-07-29 15:19:41,874 | INFO | agents.web_summary_agent | Starting web summary flow for url=https://id.wikipedia.org/wiki/John_F._Kennedy
+2026-07-29 15:19:41,874 | INFO | agents.web_summary_agent | Completed web summary flow for url=https://id.wikipedia.org/wiki/John_F._Kennedy
+2026-07-29 15:19:41,876 | INFO | agents.web_summary_agent | Starting web summary flow for url=https://id.wikipedia.org/wiki/John_F._Kennedym
+2026-07-29 15:19:41,876 | ERROR | agents.web_summary_agent | Scrape step failed for url=https://id.wikipedia.org/wiki/John_F._Kennedym: boom
+2026-07-29 15:21:10,782 | INFO | app | Root endpoint accessed
+2026-07-29 15:21:10,793 | INFO | app | Received web summary request for url=https://example.com/
+2026-07-29 15:21:10,793 | INFO | app | Web summary request completed for url=https://example.com/
+2026-07-29 15:21:10,800 | INFO | app | Received web summary request for url=https://example.com/
+2026-07-29 15:21:10,800 | ERROR | app | Web summary request failed: bad url
+2026-07-29 15:21:10,805 | WARNING | tools.guardrails | Source content trimmed from 22 to 16 characters
+2026-07-29 15:21:10,808 | WARNING | tools.guardrails | Summary truncated from 7 to 5 words
+2026-07-29 15:21:10,811 | INFO | services.scraper | Scraping url=not-a-url
+2026-07-29 15:21:10,812 | WARNING | services.scraper | Rejected invalid url=not-a-url
+2026-07-29 15:21:10,814 | INFO | services.scraper | Scraping url=https://example.com
+2026-07-29 15:21:10,816 | INFO | services.scraper | Scrape completed url=https://example.com title=Sample Page length=33
+2026-07-29 15:21:10,819 | INFO | agents.web_summary_agent | Starting web summary flow for url=https://id.wikipedia.org/wiki/John_F._Kennedy
+2026-07-29 15:21:10,819 | INFO | agents.web_summary_agent | Completed web summary flow for url=https://id.wikipedia.org/wiki/John_F._Kennedy
+2026-07-29 15:21:10,821 | INFO | agents.web_summary_agent | Starting web summary flow for url=https://id.wikipedia.org/wiki/John_F._Kennedym
+2026-07-29 15:21:10,821 | ERROR | agents.web_summary_agent | Scrape step failed for url=https://id.wikipedia.org/wiki/John_F._Kennedym: boom
