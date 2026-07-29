@@ -11,7 +11,7 @@ logger = get_logger(__name__)
 
 app = FastAPI(
 	title="Agentic Architect Challenge",
-	description="Part 2 & 3: web summary plus FAQ-based support agent with memory and tools.",
+	description="web summary plus FAQ-based support agent with memory and tools.",
 	version="1.0.0",
 )
 

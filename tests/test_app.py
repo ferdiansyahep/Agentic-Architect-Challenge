@@ -1,3 +1,5 @@
+from urllib import response
+
 from fastapi.testclient import TestClient
 
 import app as app_module
@@ -89,3 +91,12 @@ def test_support_chat_endpoint_rejects_failure(monkeypatch):
 
     assert response.status_code == 400
     assert response.json()["detail"]["error"] == "unable to answer"
+
+
+def test_support_chat_rejects_blank_question():
+    response = client.post(
+        "/support-chat",
+        json={"session_id": "user-1", "question": "   "},
+    )
+
+    assert response.status_code == 422
